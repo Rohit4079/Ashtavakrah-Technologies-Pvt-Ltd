@@ -327,7 +327,7 @@ export default function EventsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      {/* <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-4xl font-bold">Ready to Join Our Community?</h2>
@@ -356,7 +356,7 @@ export default function EventsPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

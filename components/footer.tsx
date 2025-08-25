@@ -26,7 +26,7 @@ export function Footer() {
             </div>
             <p className="text-gray-400 text-sm">
               Making science and technology engaging and career-ready through interactive learning experiences for
-              school students. Launching in 2025.
+              school students.
             </p>
           </div>
 
@@ -50,12 +50,12 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Our Services</h4>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>Microcontroller Workshops</p>
-              <p>AI/ML Training</p>
               <p>Quantum Computing</p>
+              <p>AI/ML Training</p>
+              <p>Embedded Microcontroller Workshops</p>            
               <p>Robotics Programs</p>
-              <p>Scientific DIY Kits</p>
-              <p>Custom STEM Curriculum</p>
+              <p>Scientific DIWI </p>
+              <p>Active Science Experiments</p>
             </div>
           </div>
 

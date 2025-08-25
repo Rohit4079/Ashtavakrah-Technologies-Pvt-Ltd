@@ -33,30 +33,70 @@ export default function HomePage() {
     return () => clearTimeout(timer); // cleanup
   }, []);
 
+  const videos = ["/v1.mp4", "/v2.mp4", "/v3.mp4", "/v4.mp4"];
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % videos.length);
+    }, 5000); // ⏱️ change video every 5 sec
+    return () => clearInterval(interval);
+  }, [videos.length]);
+
 
   const services = [
+    // {
+    //   icon: Cpu,
+    //   title: "Microcontroller Workshops",
+    //   description: "Hands-on Arduino and Raspberry Pi programming sessions",
+    //   color: "from-blue-500 to-cyan-500",
+    // },
+    // {
+    //   icon: Brain,
+    //   title: "AI/ML Training",
+    //   description: "Introduction to artificial intelligence and machine learning",
+    //   color: "from-purple-500 to-pink-500",
+    // },
+    // {
+    //   icon: Atom,
+    //   title: "Active Sciences",
+    //   description: "Explore the Science with Fun",
+    //   color: "from-green-500 to-teal-500",
+    // },
+    // {
+    //   icon: Rocket,
+    //   title: "Robotics Programs",
+    //   description: "Build and program your own robots",
+    //   color: "from-orange-500 to-red-500",
+    // },
     {
-      icon: Cpu,
-      title: "Microcontroller Workshops",
-      description: "Hands-on Arduino and Raspberry Pi programming sessions",
-      color: "from-blue-500 to-cyan-500",
+      img: "/Quantum Computing.jpg", // place your image path here
+      title: "Quantum Computing",
+      description: "Learn the fundamentals of quantum algorithms and computation.",
+      color: "from-indigo-500 to-purple-500",
     },
     {
-      icon: Brain,
-      title: "AI/ML Training",
-      description: "Introduction to artificial intelligence and machine learning",
+      img: "/AIML.jpg",
+      title: "AI/ML",
+      description: "Introduction to Artificial Intelligence and its applications.",
       color: "from-purple-500 to-pink-500",
     },
     {
-      icon: Atom,
-      title: "Active Sciences",
-      description: "Explore the Science with Fun",
+      img: "/Robotics.png",
+      title: "Robotics",
+      description: "Hands-on training on supervised and unsupervised learning models.",
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      img: "/Embedded.png",
+      title: "Embedded Systems",
+      description: "Design and program microcontroller-based embedded projects.",
       color: "from-green-500 to-teal-500",
     },
     {
-      icon: Rocket,
-      title: "Robotics Programs",
-      description: "Build and program your own robots",
+      img: "/Activescience.jpg",
+      title: "Active Science",
+      description: "Explore scientific concepts with fun and engaging experiments.",
       color: "from-orange-500 to-red-500",
     },
   ]
@@ -113,25 +153,44 @@ export default function HomePage() {
                   <p className="text-xs text-gray-500">Vikatan Award</p>
                 </div>
               </div> */}
-               <img
-              src="/Tem1.jpg" // 👈 your uploaded image
-              alt="Popup Banner"
-              className="rounded-lg w-full"
-            />
+              <img
+                src="/Tem1.jpg" // 👈 your uploaded image
+                alt="Popup Banner"
+                className="rounded-lg w-full"
+              />
 
-            {/* CTA Button */}
-            <Button className="w-full bg-red-500 hover:bg-red-600 text-white mt-4">
-              Book Free Demo
-            </Button>
+              {/* CTA Button */}
+              <Button className="w-full bg-red-500 hover:bg-red-600 text-white mt-4">
+                Book Free Demo
+              </Button>
             </div>
-           
+
           </div>
         </div>
       )}
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-blue-600 to-teal-500 text-white">
-        <div className="absolute inset-0 science-pattern"></div>
+        {/* <div className="absolute inset-0 science-pattern"></div> */}
+
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          {videos.map((src, i) => (
+            <video
+              key={i}
+              src={src}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === current ? "opacity-100" : "opacity-0"
+                }`}
+            />
+          ))}
+          {/* Dark overlay for readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+
+
         <div className="relative container mx-auto px-4 py-20 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -215,14 +274,19 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {services.map((service, index) => (
               <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
                 <CardHeader className="text-center pb-4">
                   <div
-                    className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+                    className={"w-20 h-20 mx-auto rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform overflow-hidden"}
                   >
-                    <service.icon className="h-8 w-8 text-white" />
+                    {/* <service.icon className="h-8 w-8 text-white" /> */}
+                    <img
+                      src={service.img}
+                      alt={service.title}
+                      className="h-full w-full rounded-full object-cover"
+                    />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
@@ -289,7 +353,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      {/* <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-4xl font-bold">Stay Updated on Our Launch</h2>
@@ -314,8 +378,8 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
-      </div>
-      )
+      </section> */}
+    </div>
+  )
 }
 
