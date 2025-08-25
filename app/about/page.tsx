@@ -7,24 +7,28 @@ import { Target, Eye, Heart, Users, Award, Lightbulb, ArrowRight, CheckCircle } 
 export default function AboutPage() {
   const values = [
     {
+      img: "/innovation.jpg",
       icon: Lightbulb,
       title: "Innovation",
       description:
         "We're developing cutting-edge teaching methods that incorporate the latest technologies and pedagogical approaches.",
     },
     {
+      img: "/passion.png",
       icon: Heart,
       title: "Passion",
       description:
         "Our team is passionate about making science and technology accessible and exciting for every student.",
     },
     {
+      img: "/community.png",
       icon: Users,
       title: "Community",
       description:
         "We're building a supportive learning community where students, educators, and parents collaborate for success.",
     },
     {
+      img: "/book.jpg",
       icon: Award,
       title: "Excellence",
       description: "We maintain the highest standards in our curriculum, instruction, and student outcomes.",
@@ -96,9 +100,7 @@ export default function AboutPage() {
               <span className="text-purple-600"> STEM Education</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Based in New Delhi, we are preparing to launch in 2025, dedicated to making science and technology
-              engaging, accessible, and career-ready through innovative learning experiences that inspire the next
-              generation of innovators.
+              Based in New Delhi, we are set to launch in 2025 with a mission to make science and technology engaging, accessible, and career-ready. Through innovative learning experiences, we aim to ignite curiosity, build confidence, and empower the next generation of innovators.
             </p>
           </div>
         </div>
@@ -117,9 +119,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  To make science and technology engaging and career-ready through interactive learning experiences that
-                  bridge the gap between theoretical knowledge and practical application, preparing students for the
-                  challenges of tomorrow.
+                  Our mission is to transform science and technology education by making it engaging, practical, and future-ready. Through interactive learning experiences, we bridge the gap between theory and real-world application, empowering students to innovate, create, and thrive in tomorrow's world.
                 </p>
               </CardContent>
             </Card>
@@ -133,9 +133,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  To be India's leading STEM education provider, creating a generation of innovative thinkers and
-                  problem solvers who will drive technological advancement and contribute to building a better future
-                  for society.
+                  Our vision is to be India's leading STEM education provider—nurturing a generation of creative thinkers and problem solvers who will drive technological innovation and shape a brighter future for society.
                 </p>
               </CardContent>
             </Card>
@@ -144,7 +142,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -175,7 +173,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Values */}
       <section className="py-20">
@@ -188,16 +186,31 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow border-0">
-                <CardHeader>
-                  <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center mb-4">
-                    <value.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">{value.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{value.description}</p>
-                </CardContent>
+              <Card key={index} className="relative text-center hover:shadow-lg transition-shadow border-0 overflow-hidden">
+                {/* Blurred background */}
+                <div
+                  className="absolute inset-0 "
+                  style={{
+                    backgroundImage: `url(${value.img})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    filter: 'blur(2px)', // 40% blur
+                    transform: 'scale(1.05)',
+                     // optional, prevents edges from showing
+                  }}
+                ></div>
+                {/* Card content above blur */}
+                <div className="relative z-10 p-4">
+                  <CardHeader>
+                    <div className="w-16 h-16 mx-auto rounded-full bg-white/20 flex items-center justify-center mb-4">
+                      <value.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <CardTitle className="text-xl text-white">{value.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white">{value.description}</p>
+                  </CardContent>
+                </div>
               </Card>
             ))}
           </div>

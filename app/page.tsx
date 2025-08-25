@@ -154,7 +154,7 @@ export default function HomePage() {
                 </div>
               </div> */}
               <img
-                src="/Tem1.jpg" // 👈 your uploaded image
+                src="/Tem1.jpg" // your uploaded image
                 alt="Popup Banner"
                 className="rounded-lg w-full"
               />
@@ -170,7 +170,7 @@ export default function HomePage() {
       )}
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-blue-600 to-teal-500 text-white">
+      <section className="relative overflow-hidden text-white">
         {/* <div className="absolute inset-0 science-pattern"></div> */}
 
         <div className="absolute inset-0 w-full h-full overflow-hidden">
