@@ -37,7 +37,7 @@ export default function EventsPage() {
       type: "Workshop",
       status: "Beta Testing",
       capacity: "15 students",
-      price: "₹500 (Refundable)",
+      price: "Free",
       image: "/ar.webp",
       highlights: [
         "Hands-on Arduino programming",
@@ -183,7 +183,7 @@ export default function EventsPage() {
                 </CardHeader>
 
                 <CardContent className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
+                  {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
                     <div className="flex items-center space-x-2">
                       <Calendar className="h-4 w-4" />
                       <span>{event.date}</span>
@@ -200,7 +200,7 @@ export default function EventsPage() {
                       <Users className="h-4 w-4" />
                       <span>{event.capacity}</span>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="space-y-2">
                     <h4 className="font-medium text-gray-900">Event Highlights:</h4>

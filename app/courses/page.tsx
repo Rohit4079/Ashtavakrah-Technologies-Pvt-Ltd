@@ -16,7 +16,7 @@ export default function CoursesPage() {
       duration: "4 weeks",
       students: 150,
       rating: 4.8,
-      // price: 5000,
+      price: 5000,
       image:  "/arduino-teaching-1.jpg",
 
       features: [
@@ -38,7 +38,7 @@ export default function CoursesPage() {
       duration: "8 weeks",
       students: 200,
       rating: 4.9,
-      // price: 12000,
+      price: 12000,
       image: "/mi.png",
       features: [
         "Python programming basics",
@@ -59,7 +59,7 @@ export default function CoursesPage() {
       duration: "10 weeks",
       students: 120,
       rating: 4.7,
-      // price: 15000,
+      price: 15000,
       image: "/ro.jpg",
       features: [
         "Robot design principles",
@@ -80,7 +80,7 @@ export default function CoursesPage() {
       duration: "6 weeks",
       students: 80,
       rating: 4.6,
-      // price: 18000,
+      price: 18000,
       image: "/qu.jpg",
       features: [
         "Quantum mechanics principles",
@@ -101,7 +101,7 @@ export default function CoursesPage() {
       duration: "6 weeks",
       students: 100,
       rating: 4.8,
-      // price: 10000,
+      price: 10000,
       image: "/iot.png",
       features: [
         "IoT architecture and protocols",
@@ -122,7 +122,7 @@ export default function CoursesPage() {
       duration: "4 weeks",
       students: 90,
       rating: 4.5,
-      // price: 8000,
+      price: 8000,
       image: "/3d.webp",
       features: [
         "3D modeling with Fusion 360",
@@ -252,11 +252,11 @@ export default function CoursesPage() {
                   </div>
 
                   <div className="flex items-center justify-between pt-4 border-t">
-                    <div>
+                    {/* <div>
                       <p className="text-sm text-gray-500">Instructor</p>
                       <p className="font-medium text-gray-900">{course.instructor}</p>
                     </div>
-                    {/* <div className="text-right">
+                    <div className="text-right">
                       <p className="text-2xl font-bold text-purple-600">₹{course.price.toLocaleString()}</p>
                     </div> */}
                   </div>
@@ -332,10 +332,10 @@ export default function CoursesPage() {
                       <p className="text-sm text-gray-500">Duration</p>
                       <p className="font-medium">{path.duration}</p>
                     </div>
-                    <div className="text-right">
+                    {/* <div className="text-right">
                       <p className="text-sm text-gray-500">Total Price</p>
                       <p className="text-xl font-bold text-purple-600">{path.price}</p>
-                    </div>
+                    </div> */}
                   </div>
                   <Button className="w-full bg-gradient-to-r from-purple-500 to-pink-500">Start Learning Path</Button>
                 </CardContent>
