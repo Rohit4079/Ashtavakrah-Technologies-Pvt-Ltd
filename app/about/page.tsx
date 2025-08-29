@@ -241,7 +241,7 @@ export default function AboutPage() {
                   <p className="text-purple-600 font-medium">{member.role}</p>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm">{member.expertise}</p>
+                  {/* <p className="text-gray-600 text-sm">{member.expertise}</p> */}
                 </CardContent>
               </Card>
             ))}
