@@ -33,7 +33,7 @@ export default function HomePage() {
     return () => clearTimeout(timer); // cleanup
   }, []);
 
-  const videos = ["/v1.mp4", "/v2.mp4", "/v3.mp4", "/v4.mp4"];
+  const videos = ["/V1.mp4", "/V2.mp4", "/V3.mp4", "/V4.mp4"];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -245,7 +245,7 @@ export default function HomePage() {
                   {[
                     "Hands-on practical learning approach",
                     "Expert instructors with industry experience",
-                    "Strong insight into school environments for effective learning",
+                    "Connect classroom concepts with real-world applications",
                     "Empowering students with future-focused skills",
                     "School-friendly practical workshops",
                     "Innovative, creativity-focused curriculum",
@@ -316,7 +316,7 @@ export default function HomePage() {
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
-                    <Badge variant="secondary">{event.date}</Badge>
+                    {/* <Badge variant="secondary">{event.date}</Badge> */}
                     <Badge variant="outline" className="text-green-600 border-green-600">
                       {event.spots}
                     </Badge>

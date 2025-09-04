@@ -17,7 +17,7 @@ export default function CoursesPage() {
       students: 150,
       rating: 4.8,
       price: 5000,
-      image:  "/arduino-teaching-1.jpg",
+      image:  "/Arduino-Programming.jpg",
 
       features: [
         "Basic electronics concepts",
@@ -31,7 +31,7 @@ export default function CoursesPage() {
     },
     {
       id: 2,
-      title: "Machine Learning for Beginners",
+      title: "AI and Machine Learning Basics",
       description: "Introduction to AI and ML concepts with Python programming",
       category: "AI/ML",
       level: "Intermediate",
@@ -39,7 +39,7 @@ export default function CoursesPage() {
       students: 200,
       rating: 4.9,
       price: 12000,
-      image: "/mi.png",
+      image: "/AIML.jpg",
       features: [
         "Python programming basics",
         "Data analysis with pandas",
@@ -60,7 +60,7 @@ export default function CoursesPage() {
       students: 120,
       rating: 4.7,
       price: 15000,
-      image: "/ro.jpg",
+      image: "/robotics.webp",
       features: [
         "Robot design principles",
         "Motor control and sensors",
@@ -94,7 +94,7 @@ export default function CoursesPage() {
     },
     {
       id: 5,
-      title: "IoT Development Workshop",
+      title: "Smart Technology IoT Workshop",
       description: "Create connected devices and IoT applications",
       category: "IoT",
       level: "Intermediate",
@@ -102,7 +102,7 @@ export default function CoursesPage() {
       students: 100,
       rating: 4.8,
       price: 10000,
-      image: "/iot.png",
+      image: "/IOT.jpg",
       features: [
         "IoT architecture and protocols",
         "ESP32 and WiFi connectivity",
@@ -123,7 +123,7 @@ export default function CoursesPage() {
       students: 90,
       rating: 4.5,
       price: 8000,
-      image: "/3d.webp",
+      image: "/3d.png",
       features: [
         "3D modeling with Fusion 360",
         "3D printing technologies",
@@ -147,12 +147,11 @@ export default function CoursesPage() {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <Badge className="mb-4">Our Services</Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900">
-              Master Tomorrow's
-              <span className="text-purple-600"> Technologies</span> Today
+              Transform Your  
+              <span className="text-purple-600"> School</span><br /> into a Hub of  <span className="text-purple-600"> Innovation</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive courses designed to take you from beginner to expert in cutting-edge technologies. Learn
-              through hands-on projects and real-world applications.
+              Comprehensive school-focused courses that take students from basics to advanced technologies, making your institution a center of excellence.
             </p>
           </div>
         </div>
@@ -191,11 +190,11 @@ export default function CoursesPage() {
                 key={course.id}
                 className="group hover:shadow-xl transition-all duration-300 border-0 bg-white overflow-hidden"
               >
-                {course.popular && (
+                {/* {course.popular && (
                   <div className="absolute top-4 left-4 z-10">
                     <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">Most Popular</Badge>
                   </div>
-                )}
+                )} */}
 
                 <div className="relative overflow-hidden">
                   <img

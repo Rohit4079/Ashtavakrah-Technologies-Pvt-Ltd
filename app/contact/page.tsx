@@ -55,13 +55,13 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91-8090971821", "Mon-Sat: 9:00 AM - 6:00 PM"],
+      details: ["+91-8090971821", "+91-9005384687"],
       color: "from-green-500 to-teal-500",
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@ashtavakrah.com", "ashtavakrahtech@gmail.com"],
+      details: ["ashtavakrahtech@gmail.com", ""],
       color: "from-purple-500 to-pink-500",
     },
     {
