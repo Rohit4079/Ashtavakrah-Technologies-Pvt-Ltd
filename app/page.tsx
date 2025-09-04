@@ -33,7 +33,7 @@ export default function HomePage() {
     return () => clearTimeout(timer); // cleanup
   }, []);
 
-  const videos = ["/v1.mp4", "/v2.mp4", "/v3.mp4", "/v4.mp4"];
+  const videos = ["/v2.mp4", "/v3.mp4", "/v1.mp4", "/v4.mp4"];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
