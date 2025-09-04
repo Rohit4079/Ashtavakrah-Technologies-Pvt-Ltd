@@ -34,6 +34,6 @@ The aim of this platform is to make science and technology engaging, practical, 
 <h2>🔗 Project Links</h2>
 <ul>
   <li>GitHub Repository: https://github.com/Rohit4079/Ashtavakrah-Technologies</li>
-  <li>Vercel Deployment: https://vercel.com/rohit-mauryas-projects-4fb86d1e/ashtavakrah-technologies</li>
+  <li>Vercel Deployment: https://vercel.com/rohit-mauryas-projects-4fb86d1e/ashtavakrah-technologies-pvt-ltd-pth1</li>
   <li>Live Website (cPanel Hosting): www.ashtavakrah.com </li>
 </ul>
