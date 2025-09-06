@@ -164,7 +164,7 @@ export default function HomePage() {
 
               {/* CTA Button */}
               <Button className="w-full bg-red-500 hover:bg-red-600 text-white mt-4">
-                <Link href="/contact">
+                <Link href="/contact#Send">
                 Book Free Demo
               </Link>
                 
