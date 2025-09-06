@@ -104,6 +104,7 @@ export default function HomePage() {
   const upcomingEvents = [
     {
       title: "Launch Announcement",
+      img: "/Rc.jpg",
       date: "Jan 2025",
       time: "Coming Soon",
       location: "New Delhi",
@@ -111,6 +112,7 @@ export default function HomePage() {
     },
     {
       title: "AI for Beginners",
+      img: "/R1c.jpg",
       date: "Feb 2025",
       time: "To Be Announced",
       location: "Online",
@@ -118,6 +120,7 @@ export default function HomePage() {
     },
     {
       title: "Robotics Challenge",
+      img: "/R2c.jpg",
       date: "Mar 2025",
       time: "To Be Announced",
       location: "New Delhi",
@@ -161,7 +164,10 @@ export default function HomePage() {
 
               {/* CTA Button */}
               <Button className="w-full bg-red-500 hover:bg-red-600 text-white mt-4">
+                <Link href="/contact">
                 Book Free Demo
+              </Link>
+                
               </Button>
             </div>
 
@@ -313,18 +319,21 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {upcomingEvents.map((event, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-cover bg-center relative"
+                style={{ backgroundImage: `url(${event.img})` }}
+              >
+                <div className="bg-black/40 absolute inset-0 rounded-xl"></div> {/* overlay for readability */}
+                <CardHeader className="relative z-10">
                   <div className="flex items-center justify-between mb-2">
                     {/* <Badge variant="secondary">{event.date}</Badge> */}
                     <Badge variant="outline" className="text-green-600 border-green-600">
                       {event.spots}
                     </Badge>
                   </div>
-                  <CardTitle className="text-xl">{event.title}</CardTitle>
+                  <CardTitle className="text-xl text-white">{event.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-2 text-sm text-gray-600 mb-4">
+                <CardContent className="relative z-10">
+                  <div className="space-y-2 text-sm text-white mb-4">
                     <div className="flex items-center space-x-2">
                       <Calendar className="h-4 w-4" />
                       <span>{event.time}</span>
