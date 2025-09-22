@@ -103,8 +103,8 @@ export default function HomePage() {
 
   const upcomingEvents = [
     {
-      title: "Launch Announcement",
-      img: "/Rc.jpg",
+      title: "Cyber Security Beginner Course",
+      img: "/Cyber.jpg",
       date: "Jan 2025",
       time: "Coming Soon",
       location: "New Delhi",
@@ -112,7 +112,7 @@ export default function HomePage() {
     },
     {
       title: "AI for Beginners",
-      img: "/R1c.jpg",
+      img: "/ai.jpg",
       date: "Feb 2025",
       time: "To Be Announced",
       location: "Online",
@@ -120,7 +120,7 @@ export default function HomePage() {
     },
     {
       title: "Robotics Challenge",
-      img: "/R2c.jpg",
+      img: "/robo.jpg",
       date: "Mar 2025",
       time: "To Be Announced",
       location: "New Delhi",

@@ -9,15 +9,59 @@ export default function CoursesPage() {
   const courses = [
     {
       id: 1,
+      title: "Cyber Security Beginner",
+      description: "Understand the fundamentals of cyber security, common threats, and basic defense strategies.",
+      category: "Cyber Security",
+      level: "Beginner",
+      duration: "6 weeks",
+      students: 120,
+      rating: 4.7,
+      price: 6000,
+      image: "/CS.jpg",
+
+      features: [
+        "Introduction to cyber security concepts",
+        "Basics of networking & online safety",
+        "Understanding common cyber attacks",
+        "Hands-on practice with Wireshark & Kali Linux basics",
+        "Final project: Secure your digital profile",
+      ],
+      instructor: "Sudhanshu Mishra",
+      popular: false,
+    },
+    {
+      id: 2,
+      title: "Drone Engineering Beginner",
+      description: "Learn the fundamentals of drone, assembly, and basic flight operations with hands-on projects.",
+      category: "Drone Engineering",
+      level: "Beginner",
+      duration: "8 weeks",
+      students: 95,
+      rating: 4.6,
+      price: 12000,
+      image: "/drone.webp",
+
+      features: [
+        "Introduction to drone technology & applications",
+        "Basic aerodynamics and flight principles",
+        "Drone components: motors, propellers, and controllers",
+        "Hands-on assembly of a beginner-level drone",
+        "Final project: Build & fly your own quadcopter",
+      ],
+      instructor: "Rohit Maurya",
+      popular: true,
+    },
+    {
+      id: 3,
       title: "Arduino Programming Fundamentals",
-      description: "Learn the basics of microcontroller programming with hands-on Arduino projects",
+      description: "Learn the basics of microcontroller programming with hands-on Arduino projects.",
       category: "Microcontrollers",
       level: "Beginner",
       duration: "4 weeks",
       students: 150,
       rating: 4.8,
       price: 5000,
-      image:  "/Arduino-Programming.jpg",
+      image: "/Arduino-Programming.jpg",
 
       features: [
         "Basic electronics concepts",
@@ -30,9 +74,9 @@ export default function CoursesPage() {
       popular: false,
     },
     {
-      id: 2,
+      id: 4,
       title: "AI and Machine Learning Basics",
-      description: "Introduction to AI and ML concepts with Python programming",
+      description: "Introduction to AI and ML concepts with Python programming.",
       category: "AI/ML",
       level: "Intermediate",
       duration: "8 weeks",
@@ -51,9 +95,9 @@ export default function CoursesPage() {
       popular: true,
     },
     {
-      id: 3,
+      id: 5,
       title: "Robotics Engineering",
-      description: "Build and program autonomous robots from scratch",
+      description: "Build and program autonomous robots from scratch.",
       category: "Robotics",
       level: "Intermediate",
       duration: "10 weeks",
@@ -72,9 +116,9 @@ export default function CoursesPage() {
       popular: false,
     },
     {
-      id: 4,
+      id: 6,
       title: "Active Science Experiment",
-      description: "Empower to Ideas of Grassroot Research",
+      description: "Empower to Ideas of Grassroot Research.",
       category: "Active Science",
       level: "Intermediate",
       duration: "6 weeks",
@@ -92,9 +136,9 @@ export default function CoursesPage() {
       popular: false,
     },
     {
-      id: 5,
+      id: 7,
       title: "Quantum Computing Basics",
-      description: "Explore the fundamentals of quantum computing and quantum algorithms",
+      description: "Explore the fundamentals of quantum computing and quantum algorithms.",
       category: "Quantum",
       level: "Advanced",
       duration: "6 weeks",
@@ -112,11 +156,11 @@ export default function CoursesPage() {
       instructor: "Dr. Priya Sharma",
       popular: false,
     },
-    
+
     {
-      id: 6,
+      id: 8,
       title: "3D Printing & Design",
-      description: "Learn 3D modeling and printing for prototyping",
+      description: "Learn 3D modeling and printing for prototyping.",
       category: "Design",
       level: "Beginner",
       duration: "4 weeks",
@@ -147,7 +191,7 @@ export default function CoursesPage() {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <Badge className="mb-4">Our Services</Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900">
-              Transform Your  
+              Transform Your
               <span className="text-purple-600"> School</span><br /> into a Hub of  <span className="text-purple-600"> Innovation</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
