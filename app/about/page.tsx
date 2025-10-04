@@ -91,7 +91,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      {/* <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <Badge className="mb-4">About Ashtavakrah Technologies</Badge>
@@ -104,7 +104,35 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      {/* Left Content */}
+      <div className="space-y-6 text-center lg:text-left">
+        {/* <Badge className="mb-4">About Ashtavakrah Technologies</Badge> */}
+        <h1 className="text-4xl lg:text-4xl font-bold text-gray-900 leading-tight">
+          The Philosophy Behind  <span className="lg:text-5xl text-purple-600">Ashtavakrah Technologies</span>
+        </h1>
+        <p className="text-lg text-gray-600 max-w-xl">
+          The Ashtavakra Gita is presented as a dialogue between Guru Ashtavakra and King Janaka, who, despite his worldly power and wisdom, seeks true knowledge.
+Ashtavakra's core teaching, as presented in the Ashtavakra Gita, centres on the philosophy of Non-duality, which means everything is entangled at the microscopic level. 
+He taught that the external, material world and all its dualities—such as pleasure and motion, right and wrong, and whatever we perceive are a result of consciousness. The Quantum World is our present, and learning about its concepts is also a necessity now.
+        </p>
+      </div>
+
+      {/* Right Side Image */}
+      <div className="flex justify-center">
+        <img
+          src="/Ashta.jpeg" // replace with your image path
+          alt="Ashtavakrah Technologies"
+          className="w-full max-w-md rounded-2xl shadow-lg"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Mission & Vision */}
       <section className="py-20">

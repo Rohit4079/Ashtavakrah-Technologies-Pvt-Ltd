@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
+import { useEffect, useState } from "react";
 
 import {
   Atom,
@@ -19,7 +20,9 @@ import {
   Star,
 } from "lucide-react"
 
-import { useEffect, useState } from "react";
+// export default function WhyChooseUs() {
+
+
 
 export default function HomePage() {
   const [showModal, setShowModal] = useState(false);
@@ -32,6 +35,24 @@ export default function HomePage() {
 
     return () => clearTimeout(timer); // cleanup
   }, []);
+
+  const features = [
+    { text: "Importance of STEM Education for Children in India 💥", href: "https://www.cry.org/blog/importance-of-stem-education-for-children-in-india/"},
+    { text: "Cyber Security Awareness Month 2025 💥", href: "https://www.linkedin.com/posts/sulekha-kumari-80350691_cybersecurityawarenessmonth-cybersurakshitviksitbharat-activity-7379419029100421120-uaC_?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYWf8oBz93je3zpWSjzja2DrBv0feNQfVo" },
+    { text: "Pragati AI for Impact", href: "https://www.hindustantimes.com/genesis/pragati-ai-for-impact-supporting-entrepreneurs-to-empower-people-at-the-last-mile-101759293921506.html" },
+    { text: "Empowering students with future-focused skills", href: "https://ableducation.com/abl-news/stem-education-equipping-indias-next-generation-for-a-future-ready-workforce-2/" },
+    { text: "Prevention of Cyber Crime 💥", href: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2053438" },
+    { text: "India’s AI Revolution", href: "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/mar/doc202536513901.pdf" },
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % features.length);
+    }, 2500); // scroll every 2.5s
+    return () => clearInterval(interval);
+  }, [features.length]);
 
   const videos = ["/v2.mp4", "/v3.mp4", "/v1.mp4", "/v4.mp4"];
   const [current, setCurrent] = useState(0);
@@ -165,9 +186,9 @@ export default function HomePage() {
               {/* CTA Button */}
               <Button className="w-full bg-red-500 hover:bg-red-600 text-white mt-4">
                 <Link href="/contact#Send">
-                Book Free Demo
-              </Link>
-                
+                  Book Free Demo
+                </Link>
+
               </Button>
             </div>
 
@@ -243,8 +264,34 @@ export default function HomePage() {
                 ))}
               </div> */}
             </div>
-
             <div className="relative">
+      <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+        <h3 className="text-2xl font-bold mb-6">🎯 Important Links</h3>
+
+        {/* Scrolling container */}
+        <div className="h-32 overflow-hidden">
+          <div
+            className="transition-all duration-700"
+            style={{ transform: `translateY(-${index * 2}rem)` }}
+          >
+            {features.map((feature, i) => (
+              <div key={i} className="flex items-center space-x-3 h-8 mb-2">
+                <div className="h-3 w-3 bg-yellow-300 rounded-full"></div>
+                <a 
+                  href={feature.href} 
+                   target="_blank"
+                  className="text-blue-100 hover:text-yellow-300 transition-colors"
+                >
+                  {feature.text}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+            {/* <div className="relative">
               <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold mb-6">🎯 Why Choose Us?</h3>
                 <div className="space-y-4">
@@ -263,7 +310,7 @@ export default function HomePage() {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
