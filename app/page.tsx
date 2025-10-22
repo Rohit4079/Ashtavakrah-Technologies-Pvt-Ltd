@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { useEffect, useState } from "react";
+import FireworksCanvas from "@/components/FireworksCanvas";
+
 
 import {
   Atom,
@@ -198,8 +200,27 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden text-white">
-        {/* <div className="absolute inset-0 science-pattern"></div> */}
+        <FireworksCanvas intensity={100} maxRockets={50} className="z-20" />
 
+  <div className="absolute inset-0 w-full h-full overflow-hidden">
+    {videos.map((src, i) => (
+      <video
+        key={i}
+        src={src}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          i === current ? "opacity-100" : "opacity-0"
+        }`}
+      />
+    ))}
+    <div className="absolute inset-0 bg-black/40"></div>
+  </div>
+
+
+        {/* <div className="absolute inset-0 science-pattern"></div> */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           {videos.map((src, i) => (
             <video
