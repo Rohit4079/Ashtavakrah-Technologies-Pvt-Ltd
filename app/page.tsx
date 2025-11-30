@@ -180,7 +180,7 @@ export default function HomePage() {
                 </div>
               </div> */}
               <img
-                src="/Tem1.jpg" // your uploaded image
+                src="/Tem2.png" // your uploaded image
                 alt="Popup Banner"
                 className="rounded-lg w-full"
               />
