@@ -80,12 +80,12 @@ export default function AboutPage() {
     //   // expertise: "Robotics Expert, IIT Graduate",
     //   image: "/b.jpg",
     // },
-    {
-      name: "Yanmila Shadang",
-      role: "Specialist",
-      // expertise: "Data Scientist, Microsoft Certified",
-      image: "/y.jpg",
-    },
+    // {
+    //   name: "Yanmila Shadang",
+    //   role: "Specialist",
+    //   // expertise: "Data Scientist, Microsoft Certified",
+    //   image: "/y.jpg",
+    // },
   ]
 
   return (
@@ -254,7 +254,7 @@ export default function AboutPage() {
             <p className="text-xl text-gray-600">Our passionate team of educators and industry experts</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow border-0">
                 <CardHeader>

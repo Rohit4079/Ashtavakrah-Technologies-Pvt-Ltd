@@ -200,7 +200,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden text-white">
-        <FireworksCanvas intensity={100} maxRockets={50} className="z-20" />
+        {/* <FireworksCanvas intensity={100} maxRockets={50} className="z-20" /> */}
 
   <div className="absolute inset-0 w-full h-full overflow-hidden">
     {videos.map((src, i) => (
